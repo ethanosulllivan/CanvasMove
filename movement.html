@@ -18,9 +18,15 @@
 
         }
 
+        var pXpos = 0;
+        var pYpos = 0;
+        var pXspeed = 5;
+        var pYspeed = 6;
+        const pSize = 20;
+
         function mainloop() {
             colorRect(0, 0, canvas.width, canvas.height, 'black');
-            colorRect(0,0,20,20,'red');
+            colorRect(pXpos,pYpos,pSize,pSize,'red');
         }
 
         function colorRect(x, y, w, h, c) {
