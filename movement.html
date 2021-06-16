@@ -20,20 +20,24 @@
 
         var pXpos = 0;
         var pYpos = 0;
+        var dwidth = 50;
+        var dheight = 60;
+        var sWidth = 32;
+        var sHieght = 42;
         var pXspeed = 5;
         var pYspeed = 6;
         const pSize = 20;
 
         var player = new Image();
-        player.src = 'abomo.jpg';
+        player.src = 'player.png';
 
         function mainloop() {
             colorRect(0, 0, canvas.width, canvas.height, 'black');
-            drawImgs(player,pXpos,pYpos,pSize,pSize);
+            drawImgs(player,0,0,32,42,pXpos,pYpos,dwidth,dheight);
         }
 
-        function drawImgs(src,x,y,w,h){
-            canvasContext.drawImage(src,x,y,w,h);
+        function drawImgs(src,sx,sy,sw,sh,dx,dy,dw,dh){
+            canvasContext.drawImage(src,sx,sy,sw,sh,dx,dy,dw,dh);
 
         }
 
